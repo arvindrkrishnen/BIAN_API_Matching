@@ -145,8 +145,15 @@ def find_best_match(query: str, df: pd.DataFrame) -> Tuple[str, float]:
 
 
 if __name__ == "__main__":
+
+    #The below function downloads the BIAN API and specifications from the YAML file from the Github repo - https://github.com/bian-official/public/blob/main/release12.0.0/semantic-apis/oas3/yamls
+    #You can alternatively load the same from the CSV file in this repo.
     result_df = download_bian_api()
     #print(result_df)
+
+    #Alternate approach in place of the above.
+    #result_df = pd.read_csv('BIAN_api_info.csv')
+
 
     # Example usage of find_best_match function
     query_description = "internal audit checks"
